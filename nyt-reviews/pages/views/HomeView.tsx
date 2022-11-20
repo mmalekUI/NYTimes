@@ -2,15 +2,15 @@ import { Container } from "@chakra-ui/react";
 import React from "react";
 import SearchBar from "../api/features/SearchBar/SearchBar";
 import { GetServerSidePropsContext } from "next";
-import ReviewCards from "../api/features/ReviewCard/ReviewCard";
 import ReviewCard from "../api/features/ReviewCard/ReviewCard";
 
 type Props = {
   results: Array<Result>;
+  q: any;
 };
 
 export const HomeView = (props: Props) => {
-  console.log(props.results);
+  console.log(props.q);
   return (
     <Container>
       <div>Movie-reviews</div>
@@ -27,11 +27,11 @@ export async function getHomeViewServerSideProps(
 ) {
   // Fetch data from external API
   const res = await fetch(
-    `https://api.nytimes.com/svc/movies/v2/reviews/search.json?${ctx.query}&api-key=${process.env.API_KEY}`
+    `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${ctx.query.query}&api-key=${process.env.API_KEY}`
   );
   const reviews: APIResult = await res.json();
   // Pass data to the page via props
-  return { props: { results: reviews.results } };
+  return { props: { results: reviews.results, q: ctx.query.query } };
 }
 type APIResult = {
   status: string;

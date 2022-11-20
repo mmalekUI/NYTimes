@@ -10,7 +10,6 @@ import {
 
 import next from "next";
 import { useRouter } from "next/router";
-import { URLPattern } from "next/server";
 
 export default function SearchBar() {
   const [value, setValue] = React.useState("");
