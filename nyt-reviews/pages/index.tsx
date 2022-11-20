@@ -1,8 +1,7 @@
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { getHomeViewServerSideProps, HomeView } from "./views/HomeView";
 
-export default function Home() {
-  return <div>Movie-reviews</div>;
-}
+export default HomeView;
+
+export const getServerSideProps = getHomeViewServerSideProps;
