@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 
 export default function SearchBar() {
   const [value, setValue] = React.useState("");
+
   const router = useRouter();
 
   const handleInputChange = (e: any) => {
