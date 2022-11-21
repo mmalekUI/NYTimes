@@ -5,14 +5,22 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 To fetch data from NYTAPI do following steps
 
 Visit https://developer.nytimes.com/
+
 ● From the menu, select “Sign In” and then click on “Create an account”
+
 ● Fill the form and verify your email address
+
 ● Sign in using your login credentials
+
 ● Click on your email address in the top right corner and select “Apps” from the drop down
 menu
+
 ● Press “+ NEW APP” button
+
 ● Name your app however you want
+
 ● From the APIs section, enable “Movie Reviews API”
+
 ● Hit “Save” to get your personal API key
 
 Paste private api key to .env
