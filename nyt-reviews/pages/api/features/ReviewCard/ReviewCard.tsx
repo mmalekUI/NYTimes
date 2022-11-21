@@ -1,7 +1,14 @@
-import { Card, CardBody, Stack, Image, Heading, Text } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Stack,
+  Image,
+  Heading,
+  Text,
+  CardHeader,
+} from "@chakra-ui/react";
 import React from "react";
 import { Result } from "../../../views/HomeView";
-
 type Props = {
   result: Result;
 };
@@ -9,11 +16,14 @@ type Props = {
 const ReviewCard = (props: Props) => {
   // console.log(props.result);
   return (
-    <Card maxW="sm">
-      <CardBody>
+    <Card maxW="m">
+      <CardHeader>
         <Heading size="md">{props.result.display_title}</Heading>
+      </CardHeader>
+      <CardBody>
         <Image
           src={props.result.multimedia?.src}
+          fallbackSrc={"https://via.placeholder.com/420"}
           alt={props.result.multimedia?.type}
           borderRadius="lg"
         />

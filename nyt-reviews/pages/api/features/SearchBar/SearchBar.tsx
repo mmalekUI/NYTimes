@@ -7,8 +7,6 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
-
-import next from "next";
 import { useRouter } from "next/router";
 
 export default function SearchBar() {
