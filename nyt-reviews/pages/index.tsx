@@ -1,4 +1,4 @@
-import { getHomeViewServerSideProps, HomeView } from "./views/HomeView";
+import { getHomeViewServerSideProps, HomeView } from "../views/HomeView";
 
 export default HomeView;
 

@@ -8,7 +8,8 @@ import {
   CardHeader,
 } from "@chakra-ui/react";
 import React from "react";
-import { Result } from "../../../views/HomeView";
+import { Result } from "../../types/types";
+
 type Props = {
   result: Result;
 };
