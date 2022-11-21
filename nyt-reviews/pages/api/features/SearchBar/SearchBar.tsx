@@ -27,16 +27,21 @@ export default function SearchBar() {
   {
     return (
       <Box
+        w="100%"
         rounded={"lg"}
         bg={useColorModeValue("white", "gray.700")}
         boxShadow={"lg"}
-        p={8}
+        p={10}
+        mt={25}
+        mb={25}
       >
         <FormControl id="email" onSubmit={onSubmitHandler}>
           <FormLabel>Type movie name:</FormLabel>
           <Input type="email" value={value} onChange={handleInputChange} />
         </FormControl>
-        <Button onClick={onSubmitHandler}>Show reviews</Button>
+        <Button mt={5} onClick={onSubmitHandler}>
+          Show reviews
+        </Button>
       </Box>
     );
   }

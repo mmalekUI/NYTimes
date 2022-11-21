@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Box, Container, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import SearchBar from "../api/features/SearchBar/SearchBar";
 import { GetServerSidePropsContext } from "next";
@@ -12,13 +12,16 @@ type Props = {
 export const HomeView = (props: Props) => {
   console.log(props.q);
   return (
-    <Container>
-      <div>Movie-reviews</div>
-      <SearchBar />
-      {props.results.map((result) => (
-        <ReviewCard result={result} />
-      ))}
-    </Container>
+    <Box>
+      <Container>
+        <SearchBar />
+      </Container>
+      <SimpleGrid columns={[1, null, 2]}>
+        {props.results.map((result) => (
+          <ReviewCard result={result} />
+        ))}
+      </SimpleGrid>
+    </Box>
   );
 };
 

@@ -16,14 +16,14 @@ type Props = {
 const ReviewCard = (props: Props) => {
   // console.log(props.result);
   return (
-    <Card maxW="m">
+    <Card maxW="l" m={10}>
       <CardHeader>
         <Heading size="md">{props.result.display_title}</Heading>
       </CardHeader>
       <CardBody>
         <Image
           src={props.result.multimedia?.src}
-          fallbackSrc={"https://via.placeholder.com/420"}
+          fallbackSrc={"https://via.placeholder.com/440x300"}
           alt={props.result.multimedia?.type}
           borderRadius="lg"
         />
